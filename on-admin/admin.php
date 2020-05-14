@@ -1,14 +1,9 @@
 <?php
-//if(empty($_SESSION['username'])){
-//    echo "Not found!";
-//} else {
-    switch ($_GET['act']) {
-    // PROSES VIEW DATA USER //      
+    switch ($_GET['act']) {     
       case 'view':
       ?>
 
 <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
         <section class="content-header">
         <h1> Data Pengguna </h1>
             <ol class="breadcrumb">
@@ -17,14 +12,12 @@
              </ol>
         </section>
 
-<!-- Main content -->
 <section class="content">
 	<div class="row">
 		<div class="col-md-12">
     <div class="box-header">
     <a href="?pg=admin&act=add"> <button type="button" class="btn btn-info"><i class = "fa fa-plus"> Tambah Data </i></button> </a>
-    </div><!-- /.box-header -->
-              <!-- general form elements -->
+    </div>
               <div class="box box-info">
                   <div class="box-body">
                   <div class="table-responsive">
@@ -67,19 +60,17 @@
                     ?>
                     </tbody>
                   </table>
-                  </div><!-- /.box-body -->
+                  </div>
               </div>
-              </div><!-- /.box -->
-              </div> <!-- /.col -->
+              </div>
+              </div>
 	</div>
-    <!-- /.row (main row) -->
-</section> <!-- /.content -->
-    </div><!-- /.container -->
-</div><!-- /.content-wrapper -->
+</section>
+    </div>
+</div>
 
       <?php
       break;
-      // PROSES TAMBAH DATA PENGGUNA //
       case 'add':
       if (isset($_POST['add'])) {
                 $query = mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO t_user VALUES ('','$_POST[nama]','$_POST[username]',
@@ -89,7 +80,6 @@
               ?>
 
 <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
         <section class="content-header">
         <h1> Data Pengguna </h1>
             <ol class="breadcrumb">
@@ -98,15 +88,12 @@
             <li class="active"><a href="#">Tambah Data Pengguna</a></li>
              </ol>
         </section>
-
 <!-- Main content -->
 <section class="content">
   <div class="row">
     <div class="col-md-12">
-              <!-- general form elements -->
               <div class="box box-success">
                   <div class="box-body">
-                  <!-- form start -->
                 <form role="form" method = "POST" action="">
                   <div class="box-body">
                     <div class="form-group">
@@ -130,15 +117,10 @@
                       <input type="radio" name="level_user" id="level_user" value="user" required data-fv-notempty-message="Tidak boleh kosong"> User
                       </label>
                     </div>
-                  </div><!-- /.box-body -->
-
-              </div><!-- /.box -->
-              </div> <!-- /.col -->
-
-              </div> <!-- /.row -->
-
-          
-            <!-- Tombol Bagian Bawah -->
+                  </div>
+              </div>
+              </div> 
+              </div> 
 
             <div class="row">
             <!-- left column -->
@@ -247,9 +229,6 @@
               </div> <!-- /.col -->
 
               </div> <!-- /.row -->
-
-          
-            <!-- Tombol Bagian Bawah -->
 
             <div class="row">
             <!-- left column -->

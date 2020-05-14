@@ -4,9 +4,7 @@ error_reporting
 
 <?php
     switch ($_GET['act']) {
-    
-    
-// PROSES VIEW DATA PRODUK //      
+     
 case 'view':
 ?>
 
@@ -81,7 +79,7 @@ case 'view':
 
       // PROSES TAMBAH DATA PRODUK //
       case 'add':
-//proses
+
     if(isset($_POST['add'])) {
     $nama_produk=$_POST['nama_produk'];
     $harga_produk=$_POST['harga_produk'];
@@ -89,7 +87,7 @@ case 'view':
     $satuan=$_POST['satuan'];
     $tanggal_masuk=$_POST['tanggal_masuk'];
    
-//script validasi data
+
  
     $cek = mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM t_produk WHERE id_produk='$id_produk'"));
     if ($cek > 0){
@@ -153,9 +151,6 @@ case 'view':
               </div> 
 
               </div>
-
-          
-            <!-- Tombol Bagian Bawah -->
 
             <div class="row">
             <!-- left column -->

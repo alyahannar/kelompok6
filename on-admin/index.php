@@ -149,19 +149,7 @@ session_start();
       <?php
       include "content.php";
       ?>
-      <!-- /.content-wrapper -->
-
-
-      <!-- <footer class="main-footer">
-        <div align="center" class="pull-center hidden-xs">
-          <b><strong >Copyright &copy; 2017 <a href="webphpmysql.com">AZIZ HUSEN</a>.</strong></b>
-        </div>
-        
-      </footer> -->
-
-      
-      <!-- Add the sidebar's background. This div must be placed
-           immediately after the control sidebar -->
+     
       <div class="control-sidebar-bg"></div>
     </div><!-- ./wrapper -->
 

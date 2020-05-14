@@ -8,11 +8,8 @@ $login=mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM admin WHERE usern
 $ketemu=mysqli_num_rows($login);
 $r=mysqli_fetch_array($login);
 
-// Apabila username dan password ditemukan
 if ($ketemu > 0){
   session_start();
-  
-  // inisialisasi session /////////
   
   ("username");
   ("password");

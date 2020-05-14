@@ -1,9 +1,6 @@
 <?php
 
-    switch ($_GET['act']) {
-
-  
-    // PROSES VIEW DATA Penjualan //      
+    switch ($_GET['act']) {    
       case 'view':
       ?>
 
@@ -133,7 +130,6 @@
                   <div class="box-body">
                     <div class="form-group">
                       <?php
-                      //memulai mengambil datanya
                       $sql = mysqli_query($GLOBALS["___mysqli_ston"], "select * from t_penjualan");
                       
                       $num = mysqli_num_rows($sql);
@@ -146,7 +142,6 @@
                       $kode = 1;
                       }
                       
-                      //mulai bikin kode
                       $bikin_kode = str_pad($kode, 4, "0", STR_PAD_LEFT);
                       $tahun = date('Ym');
                       $kode_jadi = "PJLN$tahun$bikin_kode";
@@ -189,7 +184,6 @@
               </div> <!-- /.row -->
 
           
-            <!-- Tombol Bagian Bawah -->
 
             <div class="row">
             <!-- left column -->
