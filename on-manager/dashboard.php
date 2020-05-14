@@ -16,7 +16,7 @@
        <br/>
    
 
-         <div class="row">
+<div class="row">
     <div class="col-lg-6" style="float:none;margin:auto;">
         <div class="panel panel-default">
 		    <!-- <div class="callout callout-danger">
@@ -57,17 +57,12 @@
                         </table>
 
                     </div>
-                    <div class="col-md-6">
-
-
-                    </div>
                 </div>
-
             </div>
         </div>
     </div>
-				
-			
-		</div>
-      </div>
+</div>
+
+</div>
+
 	 

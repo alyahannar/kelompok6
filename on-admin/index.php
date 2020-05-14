@@ -41,6 +41,7 @@ session_start();
 
     <script src="plugins/slider/js/jssor.slider-21.1.6.min.js" type="text/javascript"></script>
 
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -110,23 +111,33 @@ session_start();
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">Menu Utama</li>
-            <li >
+
+            <li class="treeview">
               <a href="?pg=dashboard">
-                <i class="fa fa-home fa-fw"></i> <span>Home</span>
+                <div id="home">
+                <i class="fa fa-home fa-fw"></i> 
+                <span v-bind:title="message">Home</span>
+                </div>
               </a>
             </li>
-                        
+         
+        
           <li class="treeview">
              <a href="?pg=produk&act=view">
+             <div id="app">
                <i class="fa fa-pencil-square-o"></i> 
-                <span>Data Produk</span> 
+                <span v-bind:title="message">Data Produk</span> 
+              </div>
               </a>
             </li>
+        
 
             <li class="treeview">
               <a href="?pg=penjualan&act=view">
+              <div id="app2">
                 <i class="fa fa-shopping-cart"></i>
-                <span>Data Penjualan</span> 
+                <span v-bind:title="message">Data Penjualan</span> 
+              </div>
               </a>
             </li>
             </ul>
@@ -153,6 +164,32 @@ session_start();
            immediately after the control sidebar -->
       <div class="control-sidebar-bg"></div>
     </div><!-- ./wrapper -->
+
+    <script src="vue.js"></script>
+      <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+            message: 'Data Produk ' 
+            // + new Date().toLocaleString()
+            }
+        })
+
+        var app = new Vue({
+            el: '#app2',
+            data: {
+            message: 'Data Penjualan ' 
+            // + new Date().toLocaleString()
+            }
+        })
+
+        var app = new Vue({
+            el: '#home',
+            data: {
+            message: 'Terakhir memuat ' + new Date().toLocaleString()
+            }
+        })
+      </script>
 
     <!-- jQuery 2.1.4 -->
     <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
