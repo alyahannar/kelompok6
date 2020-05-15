@@ -1,9 +1,6 @@
 <?php
 
     switch ($_GET['act']) {
-
-  
-    // PROSES VIEW DATA Penjualan //      
       case 'view':
       ?>
 
@@ -82,7 +79,6 @@
 
       <?php
       break;
-      // PROSES TAMBAH DATA REALISASI //
       case 'add':
       if (isset($_POST['add'])) {
 
@@ -133,7 +129,6 @@
                   <div class="box-body">
                     <div class="form-group">
                       <?php
-                      //memulai mengambil datanya
                       $sql = mysqli_query($GLOBALS["___mysqli_ston"], "select * from t_penjualan");
                       
                       $num = mysqli_num_rows($sql);
@@ -146,7 +141,6 @@
                       $kode = 1;
                       }
                       
-                      //mulai bikin kode
                       $bikin_kode = str_pad($kode, 4, "0", STR_PAD_LEFT);
                       $tahun = date('Ym');
                       $kode_jadi = "PJLN$tahun$bikin_kode";
@@ -188,9 +182,6 @@
 
               </div> <!-- /.row -->
 
-          
-            <!-- Tombol Bagian Bawah -->
-
             <div class="row">
             <!-- left column -->
               <div class="col-md-4 col-md-offset-5">
@@ -212,8 +203,6 @@
 
       <?php
       break;
-      
-    // PROSES HAPUS DATA REALISASI //
       case 'delete':
       $ambilProduk = mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "select * from t_penjualan r
         join t_produk p on (r.id_produk=p.id_produk) where id_penjualan='$_GET[id]'"));

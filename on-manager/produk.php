@@ -4,9 +4,7 @@ error_reporting
 
 <?php
     switch ($_GET['act']) {
-    
-    
-// PROSES VIEW DATA PRODUK //      
+      
 case 'view':
 ?>
 
@@ -77,20 +75,15 @@ case 'view':
 </div>
 <?php
    break;
-
-
-      // PROSES TAMBAH DATA PRODUK //
       case 'add':
-//proses
+
     if(isset($_POST['add'])) {
     $nama_produk=$_POST['nama_produk'];
     $harga_produk=$_POST['harga_produk'];
     $stok_produk=$_POST['stok_produk'];
     $satuan=$_POST['satuan'];
     $tanggal_masuk=$_POST['tanggal_masuk'];
-   
-//script validasi data
- 
+    
     $cek = mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM t_produk WHERE id_produk='$id_produk'"));
     if ($cek > 0){
     echo "<script>window.alert('Nama Barang yang anda masukan sudah ada')
@@ -154,9 +147,7 @@ case 'view':
 
               </div>
 
-          
-            <!-- Tombol Bagian Bawah -->
-
+        
             <div class="row">
             <!-- left column -->
               <div class="col-md-4 col-md-offset-5">
@@ -177,7 +168,6 @@ case 'view':
 
       <?php
       break;
-      // PROSES EDIT DATA PRODUK //
       case 'edit':
       $d = mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM t_produk WHERE id_produk='$_GET[id]'"));
             if (isset($_POST['update'])) {
@@ -239,9 +229,7 @@ case 'view':
 
               </div> <!-- /.row -->
 
-          
-            <!-- Tombol Bagian Bawah -->
-
+        
             <div class="row">
             <!-- left column -->
               <div class="col-md-4 col-md-offset-5">
@@ -263,8 +251,6 @@ case 'view':
 
     <?php
     break;
-
-    // PROSES HAPUS DATA PENGGUNA //
       case 'delete':
       mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM t_produk WHERE id_produk='$_GET[id_produk]'");
       echo "<script>window.location='?pg=produk&act=view'</script>";

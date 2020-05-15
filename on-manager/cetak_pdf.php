@@ -98,11 +98,9 @@ $tglpenjualanak = $_POST[tanggal_penjualanakhir];
                      <p style="margin: 50px 8px 5px 510px;"> MANAGER </p>
 
 <?php
-//Batas file sampe sini
-$html = ob_get_contents(); //Proses untuk mengambil hasil dari OB..
+
+$html = ob_get_contents();
 ob_end_clean();
-//$stylesheet = file_get_contents('css/zebra.css');
-//Here convert the encode for UTF-8, if you prefer the ISO-8859-1 just change for $mpdf->WriteHTML($html);
 $mpdf->WriteHTML($stylesheet,1);
 $mpdf->WriteHTML(utf8_encode($html));
 $mpdf->Output($nama_dokumen.".pdf" ,'I');

@@ -1,9 +1,6 @@
 <?php
-//if(empty($_SESSION['username'])){
-//    echo "Not found!";
-//} else {
-    switch ($_GET['act']) {
-    // PROSES VIEW DATA USER //      
+
+    switch ($_GET['act']) {    
       case 'view':
       ?>
 
@@ -137,8 +134,7 @@
 
               </div> <!-- /.row -->
 
-          
-            <!-- Tombol Bagian Bawah -->
+     
 
             <div class="row">
             <!-- left column -->
@@ -247,9 +243,6 @@
               </div> <!-- /.col -->
 
               </div> <!-- /.row -->
-
-          
-            <!-- Tombol Bagian Bawah -->
 
             <div class="row">
             <!-- left column -->

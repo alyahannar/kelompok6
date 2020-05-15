@@ -1,8 +1,5 @@
 <?php
 switch ($_GET['act']) {
-      
-  // PROSES VIEW DATA LAPORAN PENJUALAN //      
-      
    case 'view':
 ?>
 <div class="content-wrapper">
@@ -80,7 +77,6 @@ switch ($_GET['act']) {
 break;
 
   case 'cek':
-  // menampilkan pertanyaan pertama
   $sqlp = "SELECT * FROM t_penjualan r
           JOIN t_produk p ON ( r.id_produk = p.id_produk) where
           tanggal_penjualan BETWEEN  '$_POST[tanggal_penjualanawal]' AND  '$_POST[tanggal_penjualanakhir]'
