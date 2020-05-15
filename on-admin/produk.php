@@ -261,7 +261,7 @@ case 'view':
 
     // PROSES HAPUS DATA PENGGUNA //
       case 'delete':
-      mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM t_produk WHERE id_produk='$_GET[id_produk]'");
+      mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM t_produk WHERE id_produk='$_GET[id]'");
       echo "<script>window.location='?pg=produk&act=view'</script>";
       break;
 
